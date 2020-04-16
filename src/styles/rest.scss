@@ -1,0 +1,243 @@
+/* 该容器使用 display布局 */
+
+.ly_flex {
+    display: flex;
+}
+
+.ly_block {
+    display: block;
+}
+
+.ly_inline_block {
+    display: inline-block;
+}
+
+.ly_none {
+    display: none;
+}
+
+.ly_flex_col {
+    flex-direction: column
+    /* 该容器中的内容采用横向排列 */
+}
+
+.ly_flex_row {
+    flex-direction: row
+    /* 该容器中的内容采用纵向排列 */
+}
+
+.ly_flex_row_rev {
+    flex-direction: row-reverse;
+    /* 该容器中的内容采用纵向排列 */
+}
+
+.ly_flex_flow_wrap {
+    flex-flow: wrap
+}
+
+.ly_flex_fl .ly_flex_wrap_wrap {
+    flex-wrap: wrap;
+}
+
+.ly_flex_wrap_nowrap {
+    flex-wrap: nowrap;
+}
+
+
+/* 100%填充 */
+
+.ly_flex_1 {
+    flex: 1
+}
+
+.ly_bg {
+    background: #f4f4f4;
+}
+
+.ly_border {
+    border: 1px solid #333;
+}
+
+.ly_flex_ali_center {
+    align-items: center
+}
+
+.ly_flex_ali_start {
+    align-items: flex-start;
+}
+
+.ly_flex_ali_end {
+    align-items: flex-end;
+}
+
+.ly_text_left {
+    text-align: left;
+}
+
+.ly_text_center {
+    text-align: center;
+}
+
+.ly_text_left {
+    text-align: left;
+}
+
+.ly_text_right {
+    text-align: right;
+}
+
+
+/* 容器左对齐 */
+
+.ly_flex_just_start {
+    justify-content: flex-start;
+}
+
+
+/*容器俩端对齐*/
+
+.ly_flex_just_between {
+    justify-content: space-between;
+}
+
+
+/*容器平均分布*/
+
+.ly_flex_just_around {
+    justify-content: space-around;
+}
+
+
+/* 容器居中对齐 */
+
+.ly_flex_just_center {
+    justify-content: center
+}
+
+
+/* 容器右边对齐 */
+
+.ly_flex_just_end {
+    justify-content: flex-end
+}
+
+
+/*容器左边对齐*/
+
+.ly_flex_just_start {
+    justify-content: flex-start
+}
+
+.ly_fl_r {
+    float: right;
+}
+
+.ly_fl_l {
+    float: left;
+}
+
+.st_pl_default {
+    padding-left: 30px;
+}
+
+.st_pr_default {
+    padding-right: 30px;
+}
+
+.st_pt_default {
+    padding-top: 30px;
+}
+
+.st_pb_default {
+    padding-bottom: 30px;
+}
+
+.st_ml_default {
+    margin-left: 20px;
+}
+
+.st_mr_default {
+    margin-right: 20px;
+}
+
+.st_mt_default {
+    margin-top: 20px;
+}
+
+.st_mb_default {
+    margin-bottom: 20px;
+}
+
+
+/*头部名称字体大小*/
+
+.st_hd_font {
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.st_hd_font_h2 {
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.st_hd_font_h3 {
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.st_hd_font_h4 {
+    font-size: 12px;
+    line-height: 30px;
+}
+
+
+/*tab字体大小*/
+
+.st_tab_font {
+    font-size: 12px;
+}
+
+.st_tab_font_weight {
+    font-weight: 900;
+}
+
+::-webkit-scrollbar-track-piece {
+    //滚动条凹槽的颜色，还可以设置边框属性
+    background-color: #f8f8f8;
+}
+
+::-webkit-scrollbar {
+    //滚动条的宽度
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    //滚动条的设置
+    background-color: rgba(189, 189, 189, 0.4);
+    background-clip: padding-box;
+    border-radius: 4px;
+    height: 28px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(189, 189, 189, 0.6);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.mf-table {
+    /deep/.el-card {
+        /deep/.el-card__body {
+            padding: 0;
+        }
+    }
+}
