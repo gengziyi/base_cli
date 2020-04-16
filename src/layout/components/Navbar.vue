@@ -50,8 +50,9 @@ export default {
     ])
   },
   async created() {
-    // await this.getUserLoginInfo()
     this.userInfo = JSON.parse(Cookies.get('userInfo'))
+    //获取用户角色列表
+    // await this.getUserLoginInfo()
   },
   methods: {
     // ...mapActions('user',['getUserLoginInfo']),

@@ -1,11 +1,11 @@
 import axios from 'axios'
-import { MessageBox, Message } from 'element-ui'
+import { Message } from 'element-ui'
 import store from '@/store'
 import { getToken } from '@/utils/auth'
 import VueRouter from '@/router';
 import { api_ } from '@/common/globalConfig'
 
-const [SUCCESS_CODE, ERROR_CODE, HTTP_SUCCESS_CODE, TOKEN_OVER_CODE, YB_CODE, SMS_CODE, dataBaseError] = [0, 1, 200, 401, -1, 201, 450]
+const [SUCCESS_CODE, ERROR_CODE, TOKEN_OVER_CODE] = [0, 1, 401]
 
 // create an axios instance
 export const service = axios.create({
@@ -19,10 +19,10 @@ export const service = axios.create({
 // request interceptor
 service.interceptors.request.use(
     config => {
-        // if (store.getters.token) {
-        console.log(getToken())
-        config.headers['Authorization'] = getToken() || ''
-            // }
+        if (store.getters.token) {
+            console.log(getToken())
+            config.headers['Authorization'] = getToken() || ''
+        }
         return config
     },
     error => {
@@ -77,13 +77,6 @@ class HTTP_ {
             //状态码为 200
             if (mes.code === SUCCESS_CODE) {
                 return mes.data;
-            } else if (mes.code === YB_CODE) {
-                return {...mes.data, code: YB_CODE }
-            } else if (mes.code === SMS_CODE) {
-                return {...mes.data, code: SMS_CODE }
-            } else if (mes.code === dataBaseError) {
-                Message.error(mes.message)
-                return {...mes.data, code: dataBaseError }
             } else {
                 Message.error(mes.message)
                 console.error('错误信息：', mes)
